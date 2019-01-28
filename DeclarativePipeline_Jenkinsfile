@@ -7,7 +7,7 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/selenium-saikrishna/maven.git'
+                git 'https://github.com/bhanuprakash678910/mavenproj.git'
             }
         }
         stage('ContBuild')
@@ -28,7 +28,7 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/selenium-saikrishna/TestingOnLinux.git'
+                git 'https://github.com/bhanuprakash678910/TestingOnLinux1.git'
                 sh 'java -jar  /var/lib/jenkins/workspace/Declarative_Pipeline/testing.jar'
             }
         }
@@ -37,12 +37,12 @@ pipeline
     {
         success
         {
-            input message: 'Waiting for approval from DM', submitter: 'Srinivas'
+            input message: 'Waiting for approval from DM', submitter: 'JohnPaul'
     sh 'scp /var/lib/jenkins/workspace/Declarative_Pipeline/webapp/target/webapp.war vagrant@10.10.10.33:/var/lib/tomcat7/webapps/prodenv.war'
         }
         failure
         {
-            mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'Build failed', to: 'gandham.saikrishna@gmail.com'
+            mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'Build failed', to: 'bhanuprakashece410@gmail.com'
             
         }
         
