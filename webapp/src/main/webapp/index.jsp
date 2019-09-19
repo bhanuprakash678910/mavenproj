@@ -1,1 +1,1 @@
-Hello, Ansible!
+Hello, Kubernetes!
