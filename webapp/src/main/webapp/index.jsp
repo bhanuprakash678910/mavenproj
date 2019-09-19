@@ -1,1 +1,1 @@
-Hello, Kubernetes!
+Hello, Kube!
