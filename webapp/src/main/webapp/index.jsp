@@ -1,1 +1,1 @@
-Welcome to Bhanu i Technologies//warm welcome
+Welcome to Bhanu i Technologies welcome
