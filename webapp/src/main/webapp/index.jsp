@@ -1,1 +1,1 @@
-Welcome to Jenkins CICD project the Jenkins as a Deployment..now now
+Welcome to Jenkins CICD project from Jenkins, Deployment , containerization
