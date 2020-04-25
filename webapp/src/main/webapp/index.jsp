@@ -1,1 +1,1 @@
-Welcome to Publish Over SSH plugin
+Tomorrow there is no class
