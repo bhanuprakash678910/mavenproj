@@ -9,6 +9,6 @@ node("slave1") {
    sh 'mvn package'
   }
   stage("deployment"){ 
-   deploy adapters: [tomcat9(credentialsId: 't2', path: '', url: "${params.TOMCAT_URL}:${TOMCAT_PORT}")], contextPath: 'qaenv', war: '**/*.war'
+   deploy adapters: [tomcat9(credentialsId: 't2', path: '', url: "${params.TOMCAT_URL}:${params.TOMCAT_PORT}")], contextPath: 'qaenv', war: '**/*.war'
   }
 }
