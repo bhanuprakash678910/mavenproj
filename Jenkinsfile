@@ -1,7 +1,7 @@
 node("slave1") {
- def GIT_BRANCH= 'master'
- def TOMCAT_URL= 'http://54.175.184.200'
- def TOMCAT_PORT= '8083'
+ def GIT_BRANCH= '$GIT_BRANCH'
+ def TOMCAT_URL= '$TOMCAT_URL'
+ def TOMCAT_PORT= '$TOMCAT_PORT'
   stage("git download"){ 
    checkout([$class: 'GitSCM', branches: [[name: "*/${GIT_BRANCH}"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/bhanuprakash678910/mavenproj.git']]])
   }
