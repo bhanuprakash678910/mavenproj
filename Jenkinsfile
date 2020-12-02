@@ -1,5 +1,5 @@
 node("slave1") {
- def GIT_BRANCH= 'develop'
+ def GIT_BRANCH= 'master'
  def TOMCAT_URL= 'http://54.175.184.200'
  def TOMCAT_PORT= '8083'
   stage("git download"){ 
