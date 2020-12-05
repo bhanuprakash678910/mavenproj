@@ -1,2 +1,2 @@
-welcome to Nexus cicd
+welcome to Nexus cicd with pipeline script with varaibels
  
