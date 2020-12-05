@@ -1,1 +1,1 @@
-welcome to Nexus pollscm
+welcome to Pipeline
