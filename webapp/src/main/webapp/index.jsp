@@ -1,3 +1,1 @@
-welcome to Deployment in tomcat
-welcome to webserver...
-Welcome to Tomcat Application server
+welcome to Deployment
