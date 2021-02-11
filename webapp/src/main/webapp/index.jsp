@@ -1,2 +1,1 @@
-welcome to CICD----
-docker rhghfghfghfgfjfj
+welcome to CICD
