@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+      name: mysrv
+spec:
+    selector:
+      app: dummynginx
+    type: NodePort 
+    ports:
+     - protocol: TCP
+       port: 80
+       nodePort: 32250
+       targetPort: 80
