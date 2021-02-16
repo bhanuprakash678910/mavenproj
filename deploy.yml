@@ -6,16 +6,16 @@ spec:
     replicas: 3
     selector:
       matchLabels:     
-         app: dummynginx
+         app: dummy
     template:
       metadata:
         name: mypod
         labels:
-           app: dummynginx
+           app: dummy
       spec:
         containers:
-        - name: mynginx
-          image: nginx
+        - name: mydemo
+          image: demo
           ports:
-           - containerPort: 80
+           - containerPort: 8080
 
