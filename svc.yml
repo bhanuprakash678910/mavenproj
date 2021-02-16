@@ -4,10 +4,10 @@ metadata:
       name: mysrv
 spec:
     selector:
-      app: dummynginx
+      app: dummy
     type: NodePort 
     ports:
      - protocol: TCP
        port: 80
        nodePort: 32250
-       targetPort: 80
+       targetPort: 8080
