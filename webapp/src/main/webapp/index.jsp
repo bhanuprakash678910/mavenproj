@@ -1,3 +1,3 @@
-welcome to CICD via Jenkins scripted pipeline using github triggers
+welcome to CICD via Jenkins Declarative pipeline
 
 
