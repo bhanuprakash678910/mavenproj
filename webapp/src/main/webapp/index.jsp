@@ -1,4 +1,3 @@
-welcome to CICD via Jenkins Declarative pipeline via github scm polling
-welcome to CICD
+welcome to CICD via Jenkins Declarative pipeline
 
 
