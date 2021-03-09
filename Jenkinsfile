@@ -1,22 +1,22 @@
 node(){
-  def GIT_URL='$GIT_URL'
-  def GIT_BRANCH='$GIT_BRANCH'
+ // def GIT_URL='$GIT_URL'
+//  def GIT_BRANCH='$GIT_BRANCH'
   def MAVEN_GOAL='$MAVEN_GOAL'
   def SONAR_URL='$SONAR_URL'
   def ARTIFACT_URL='$ARTIFACT_URL'
   def TAG='$TAG'
 
   properties([parameters([
-   string(defaultValue: 'https://github.com/bhanuprakash678910/mavenproj.git', description: ' GIT_URL', name: ' GIT_URL', trim: false), 
-   string(defaultValue: 'test', description: 'GIT_BRANCH', name: 'GIT_BRANCH', trim: false), 
+  // string(defaultValue: 'https://github.com/bhanuprakash678910/mavenproj.git', description: ' GIT_URL', name: ' GIT_URL', trim: false), 
+  // string(defaultValue: 'test', description: 'GIT_BRANCH', name: 'GIT_BRANCH', trim: false), 
    string(defaultValue: 'package', description: 'MAVEN_GOAL', name: 'MAVEN_GOAL', trim: false), 
    string(defaultValue: 'http://44.192.23.210:9000', description: 'SONAR_URL', name: 'SONAR_URL', trim: false), 
    string(defaultValue: 'http://44.192.23.210:8081', description: 'ARTIFACT_URL', name: 'ARTIFACT_URL', trim: false), 
    string(defaultValue: '2.0', description: 'TAG', name: 'TAG', trim: false)])
   ])
- stage("init"){
+/* stage("init"){
    checkout([$class: 'GitSCM', branches: [[name: '*/${GIT_BRANCH}']], extensions: [], userRemoteConfigs: [[url: '${GIT_URL}']]])
- }
+ } */
  stage("build"){
   sh 'mvn ${MAVEN_GOAL}'
  }
