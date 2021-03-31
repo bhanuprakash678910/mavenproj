@@ -1,3 +1,3 @@
-welcome to CICD via Jenkins and ansible
+welcome to CICD 
 
 
