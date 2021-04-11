@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bhanuprakashmavenproj 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bhanuprakashmavenproj
+  template:
+    metadata:
+      labels:
+        app: bhanuprakashmavenproj 
+    spec:
+      containers:
+        - name: bhanuprakashmavenproj 
+          image: demonewacrregistry.azurecr.io/bhanuprakashmavenproj
+          ports:
+          - containerPort: 80
