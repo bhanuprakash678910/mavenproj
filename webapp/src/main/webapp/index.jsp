@@ -1,2 +1,2 @@
-welcome to CICD with tomcat deployment  via Jenkins
+welcome to CICD with tomcat deployment  via Jenkins scripted pipeline
 
