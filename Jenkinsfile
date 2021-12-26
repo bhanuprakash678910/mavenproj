@@ -16,9 +16,9 @@ timeout(15) {
     
   stage("sonarqube"){
    sh '''mvn sonar:sonar \\
-  -Dsonar.projectKey=mavenproj \\
-  -Dsonar.host.url=http://3.143.115.227:9000 \\
-  -Dsonar.login=9c176cc1aa7c3bd3df9a72fed0d77846738d930b'''
+  -Dsonar.projectKey=mavenproj \
+  -Dsonar.host.url=http://3.139.75.133:9095 \
+  -Dsonar.login=5b6ff5432c19b08adfc058a78ee8ff6ff8985079'''
 }
 
 stage("artifactory") {
