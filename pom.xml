@@ -163,12 +163,12 @@
           <artifactId>jetty-maven-plugin</artifactId>
           <version>8.0.0.M1</version>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.sonar</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.9</version>
+        </plugin>
       </plugins>
-      <plugin>
-        <groupId>org.codehaus.sonar</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.9</version>
-      </plugin>
     </pluginManagement>
   </build>
 
