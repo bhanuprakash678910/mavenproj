@@ -1,2 +1,2 @@
-welcome to CICD with tomcat deployment  via Jenkins scripted pipeline
+welcome to DEMO BRANCH  via Jenkins scripted pipeline
 
