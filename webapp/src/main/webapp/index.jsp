@@ -1,2 +1,2 @@
-welcome to CICD with Docker and Jenkins
+welcome to CICD 
 
