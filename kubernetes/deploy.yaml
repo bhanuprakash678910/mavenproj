@@ -11,10 +11,10 @@ spec:
      metadata:
         labels:
           app: dev
-        name: mynginx23
+        name: mydev
         namespace: default
      spec:
         containers:
-          - image: bhanuprakashece410/authserv:${TAG}
+          - image: bhanuprakashece410/authserv:1.0
             imagePullPolicy: Always
-            name: mynginx2
+            name: c1
