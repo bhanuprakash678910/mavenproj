@@ -18,3 +18,4 @@ spec:
           - image: bhanuprakashece410/authserv:1.0
             imagePullPolicy: Always
             name: c1
+            containerPort: 8080
