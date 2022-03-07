@@ -1,2 +1,2 @@
-welcome to CICD Deployment via kubernetes
+welcome to CICD Deployment 
 
