@@ -1,2 +1,2 @@
-welcome to CICD Deployment via scripted pipeline
+welcome to CICD Deployment via Declarative pipeline
 
