@@ -1,2 +1,2 @@
-welcome to CICD Deployment via varaibles and properties
+welcome to CICD Deployment via varaibles
 
