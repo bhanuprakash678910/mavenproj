@@ -1,2 +1,2 @@
-welcome to CICD Deployment via Declarative pipeline
+welcome to CICD Deployment via varaibles
 
