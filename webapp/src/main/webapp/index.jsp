@@ -1,2 +1,2 @@
-welcome to jenkins
+welcome to jenkins scripted pipeline
 
