@@ -3,7 +3,7 @@ pipeline{
  parameters { 
 string(name: 'GIT_URL', defaultValue: 'https://github.com/bhanuprakash678910/mavenproj.git', description: '') 
 string(name: 'GIT_BRANCH', defaultValue: 'master', description: '') 
-string(name: 'MAVEN_GOAL', defaultValue: 'package', description: '') 
+string(name: 'MAVEN_GOAL', defaultValue: 'install', description: '') 
 }
    stages{
      stage("git init"){
