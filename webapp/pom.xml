@@ -33,7 +33,11 @@
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.9</version>
     </plugin>
-    </plugins>
+    <plugin>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.2.2</version>
+    </plugin>
+  </plugins>
   </build>
 
   <dependencies>
