@@ -24,6 +24,10 @@
          <version>3.2.2</version>
        </plugin>
      </plugins>
+     <plugin>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version> 3.9.1.2184 </version>
+     </plugin>
     </pluginManagement>
   </build>
          
