@@ -1,1 +1,1 @@
-welcome to my website via Jenkins
+welcome to my website via Scripted Pipeline
