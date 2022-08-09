@@ -1,1 +1,1 @@
-welcome to my website via push
+welcome to my website via push manually
