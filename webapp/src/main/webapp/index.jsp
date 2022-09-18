@@ -1,1 +1,1 @@
-welcome to my website
+welcome to my scripted pipeline
