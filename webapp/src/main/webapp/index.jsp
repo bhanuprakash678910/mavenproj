@@ -1,1 +1,1 @@
-welcome to my website by developer
+welcome to my website
