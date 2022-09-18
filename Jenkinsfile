@@ -1,5 +1,7 @@
 pipeline {
-agent any
+agent {
+ label 'slave1'
+}
 stages{
  stage("git init"){
    steps {
@@ -31,4 +33,3 @@ stages{
   }
  }
 }
-
