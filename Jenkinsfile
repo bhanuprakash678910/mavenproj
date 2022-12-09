@@ -1,7 +1,7 @@
+ def GIT_BRANCH="master"
+ def GIT_URL="https://github.com/bhanuprakash678910/mavenproj.git"
+ def MAVEN_GOAL="package"
 node("slave1") {
-  def GIT_BRANCH="master"
-  def GIT_URL="https://github.com/bhanuprakash678910/mavenproj.git"
-  def MAVEN_GOAL="package"
   stage("git"){
     checkout([$class: 'GitSCM', branches: [[name: '*/${GIT_BRANCH}']], extensions: [], userRemoteConfigs: [[url: '${GIT_URL}']]])
   }
