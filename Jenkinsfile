@@ -1,10 +1,12 @@
-
 node("slave1") {
+  def GIT_BRANCH='master'
+  def GIT_URL='https://github.com/bhanuprakash678910/mavenproj.git'
+  def MAVEN_GOAL='package'
   stage("git"){
-    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bhanuprakash678910/mavenproj.git']]])
+    checkout([$class: 'GitSCM', branches: [[name: '*/${GIT_BRANCH}']], extensions: [], userRemoteConfigs: [[url: '${GIT_URL}']]])
   }
    stage("maven"){
-      sh 'mvn package'
+      sh 'mvn ${MAVEN_GOAL}'
   }
    stage("sonarqube"){
      sh '''mvn clean verify sonar:sonar \\
@@ -24,4 +26,3 @@ rm -rf webapp/target/webapp-$BUILD_ID.war'''
 	    deploy adapters: [tomcat9(credentialsId: 'tomcat_user', path: '', url: 'http://3.89.79.7:8080/')], contextPath: 'testenv', war: '**/*.war'
   }
 }
-
