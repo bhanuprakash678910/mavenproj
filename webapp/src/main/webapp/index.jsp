@@ -9,7 +9,7 @@
   <%
     } else {
   %>
-      <h2>Well,  .goes.Dockerr. </h2><p>(<%= num %>)</p>
+      <h2>Well,  .goes.Docker. </h2><p>(<%= num %>)</p>
   <%
     }
   %>
