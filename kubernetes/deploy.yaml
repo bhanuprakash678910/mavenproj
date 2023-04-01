@@ -15,7 +15,7 @@ spec:
         namespace: default
      spec:
         containers:
-          - image: bhanuprakashece410/transrvc:BUILD_NUMBER
+          - image: tomcat
             imagePullPolicy: Always
             name: c1
             ports:
