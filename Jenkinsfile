@@ -5,7 +5,7 @@ pipeline {
  stages{
   stage("git") {
    steps {
-   checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bhanuprakash678910/mavenproj.git']])
+   checkout scmGit(branches: [[name: '*/br730am']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bhanuprakash678910/mavenproj.git']])
     }
   }
  stage("maven") {
