@@ -3,9 +3,14 @@ pipeline {
    label 'slave1'
  }
  stages{
+  stage("linux"){
+   steps {
+    sh 'echo i am using prod jenkinsfile'
+   }
+  }
   stage("git") {
    steps {
-   checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bhanuprakash678910/mavenproj.git']])
+   checkout scmGit(branches: [[name: '*/br730am']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bhanuprakash678910/mavenproj.git']])
     }
   }
  stage("maven") {
