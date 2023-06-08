@@ -9,7 +9,7 @@
   <%
     } else {
   %>
-      <h2>Well,  .goes.Docker. </h2><p>(<%= num %>)</p>
+      <h2>Welcome to Jenkins CICD project </h2><p>(<%= num %>)</p>
   <%
     }
   %>
