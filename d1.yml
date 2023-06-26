@@ -1,0 +1,48 @@
+---
+ - hosts: ubuntu
+   become: yes
+   tasks:
+   - name: Remove image
+     community.docker.docker_image:
+       state: absent
+       name: demo
+       tag: latest
+       force_absent: true
+     ignore_errors: yes
+   - name: Stop a container
+     docker_container:
+       name: d1
+       state: stopped
+     ignore_errors: yes
+   - name: remove container
+     docker_container:
+       name: d1
+       state: absent
+     ignore_errors: yes
+   - name: Build an image
+     community.docker.docker_image:
+        build:
+          path: ./mavenproj
+        name: demo
+        tag: latest
+        source: build
+   - name: create d1
+     docker_container:
+       name: d1
+       image: demo
+       state: started
+       ports:
+         - "8088:8080"
+   - name: loginprocess
+     docker_login:
+        username: bhanuprakashece410
+        password: "{{ pass1 }}"
+   - name: Tag and push to docker hub
+     docker_image:
+       name: demo
+       repository: bhanuprakashece410/testerserv:{{ BUILD_ID }}
+       push: true
+       source: local
+   - name: Log out of DockerHub
+     community.docker.docker_login:
+          state: absent
