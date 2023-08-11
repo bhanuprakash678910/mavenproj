@@ -9,7 +9,7 @@
   <%
     } else {
   %>
-      <h2>Welcome to Ansible  </h2><p>(<%= num %>)</p>
+      <h2>Welcome to CICD  </h2><p>(<%= num %>)</p>
   <%
     }
   %>
