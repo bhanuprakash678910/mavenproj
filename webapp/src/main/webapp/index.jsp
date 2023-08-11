@@ -5,7 +5,7 @@
     double num = Math.random();
     if (num > 0.95) {
   %>
-      <h2>Click below URL for login into my website !</h2><p>(<%= num %>)</p>
+      <h2>Click below URL for login into CICD website !</h2><p>(<%= num %>)</p>
   <%
     } else {
   %>
