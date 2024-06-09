@@ -9,7 +9,7 @@
   <%
     } else {
   %>
-      <h2>Welcome to Jenkins Build Trigger  </h2><p>(<%= num %>)</p>
+      <h2>Welcome to Jenkins webhooks  </h2><p>(<%= num %>)</p>
   <%
     }
   %>
