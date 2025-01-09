@@ -1,11 +1,9 @@
 pipeline {
-  agent {
-    label 'slave1'
-  }
+  agent any
   stages{
-	stage("maven"){
+	stage("linux"){
 	  steps {
-	    sh 'mvn package'
+	    sh 'df -h'
 	  }
 	}
 
