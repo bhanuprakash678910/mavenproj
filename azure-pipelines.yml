@@ -1,6 +1,3 @@
-# Deploy to Azure Kubernetes Service
-# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
 - master
@@ -8,18 +5,8 @@ trigger:
 resources:
 - repo: self
 
-variables:
-
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'ac0f21cd-6351-4958-b0e0-c75e5e73fd1c'
-  imageRepository: 'bhanuprakashmavenproj'
-  containerRegistry: 'demonewacrregistry.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
-  tag: '$(Build.BuildId)'
-  imagePullSecret: 'demonewacrregistry52203f65-auth'
-
   # Agent VM image name
-  vmImageName: 'ubuntu-16.04'
+  vmImageName: 'vm88'
 
 
 stages:
@@ -43,37 +30,4 @@ stages:
 
     - upload: manifests
       artifact: manifests
-
-- stage: Deploy
-  displayName: Deploy stage
-  dependsOn: Build
-
-  jobs:
-  - deployment: Deploy
-    displayName: Deploy
-    pool:
-      vmImage: $(vmImageName)
-    environment: 'bhanuprakash678910mavenproj-1868.default'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - task: KubernetesManifest@0
-            displayName: Create imagePullSecret
-            inputs:
-              action: createSecret
-              secretName: $(imagePullSecret)
-              dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
-
-          - task: KubernetesManifest@0
-            displayName: Deploy to Kubernetes cluster
-            inputs:
-              action: deploy
-              manifests: |
-                $(Pipeline.Workspace)/manifests/deployment.yml
-                $(Pipeline.Workspace)/manifests/service.yml
-              imagePullSecrets: |
-                $(imagePullSecret)
-              containers: |
-                $(containerRegistry)/$(imageRepository):$(tag)
 
