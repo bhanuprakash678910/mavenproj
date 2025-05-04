@@ -6,7 +6,7 @@ resources:
 - repo: self
 
   # Agent VM image name
-  vmImageName: 'vm88'
+  vmImageName: 'ubuntu-latest'
 
 
 stages:
