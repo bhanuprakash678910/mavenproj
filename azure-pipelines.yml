@@ -1,33 +1,20 @@
-
 trigger:
 - master
 
-resources:
-- repo: self
-
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-
+pool:
+  name: vm88  # Name of your self-hosted agent pool
 
 stages:
 - stage: Build
-  displayName: Build stage
+  displayName: Maven Build Stage
   jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: $(vmImageName)
+  - job: MavenBuild
+    displayName: 'Run mvn package on vm88'
     steps:
-    - task: Docker@2
-      displayName: Build and push an image to container registry
+    - task: Maven@3
       inputs:
-        command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
-
-    - upload: manifests
-      artifact: manifests
-
+        mavenPomFile: 'pom.xml'
+        goals: 'package'
+        options: '-X'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
