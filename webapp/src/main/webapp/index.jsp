@@ -9,7 +9,7 @@
   <%
     } else {
   %>
-      <h2>Welcome to Jenkins </h2><p>(<%= num %>)</p>
+      <h2>Welcome to Jenkins Scripted pipeline </h2><p>(<%= num %>)</p>
   <%
     }
   %>
