@@ -41,7 +41,7 @@
    - name: Tag and push to docker hub
      docker_image:
        name: demo
-       repository: bhanuprakashece410/testerserv:{{ BUILD_ID }}
+       repository: bhanuprakashece410/testerserv23:{{ BUILD_ID }}
        push: true
        source: local
    - name: Log out of DockerHub
