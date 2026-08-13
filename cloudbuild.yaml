@@ -1,0 +1,35 @@
+steps:
+  # 1. Build the Maven WAR
+  - name: 'maven:3.9-eclipse-temurin-21'
+    entrypoint: 'mvn'
+    dir: 'webapp'
+    args:
+      - 'clean'
+      - 'package'
+      - '-DskipTests'
+
+  # 2. Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA'
+      - '.'
+
+  # 3. Push Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA'
+
+images:
+  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA'
+
+# Required because the trigger uses a user-specified service account
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+substitutions:
+  _REGION: 'asia-south1'
+  _REPOSITORY: 'mavenproj'
+  _IMAGE: 'mavenproj'
