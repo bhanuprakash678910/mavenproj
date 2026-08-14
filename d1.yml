@@ -46,4 +46,4 @@
        source: local
    - name: Log out of DockerHub
      community.docker.docker_login:
-          state: absent
+          state: present
